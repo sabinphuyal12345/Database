@@ -1,0 +1,30 @@
+CREATE TABLE employee(
+    name VARCHAR2(10),
+    address VARCHAR2(10),
+    age NUMBER(2)
+);
+/
+
+CREATE TABLE manager(
+    name VARCHAR2(10),
+    address VARCHAR2(10),
+    id NUMBER(10)
+);
+/
+
+INSERT INTO employee(name,address,age)
+VALUES('sp','mulpani',22);
+/
+
+INSERT INTO manager(name,address,id)
+VALUES('sp','mulpani',1010);
+/
+
+--minus
+
+SELECT name,address,age 
+FROM employee 
+MINUS
+SELECT name,address,id 
+FROM manager;
+/

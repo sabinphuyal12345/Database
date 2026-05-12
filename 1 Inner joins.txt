@@ -1,0 +1,26 @@
+CREATE TABLE information(
+    id NUMBER(10),
+    f_name VARCHAR2(10),
+    l_name VARCHAR2(10),
+    address VARCHAR2(15)
+);
+
+CREATE TABLE info_2(
+    id NUMBER(10),
+    age NUMBER(2),
+    salary NUMBER(5)
+);
+
+INSERT INTO information(id,f_name,l_name,address)
+VALUES(10,'sp','ph','mulpani');
+
+INSERT INTO info_2(id,age,salary)
+VALUES(20,22,25000);
+
+--Inner joins
+
+SELECT information.id,information.f_name
+FROM information 
+JOIN info_2 
+ON information.id = info_2.id;
+/
